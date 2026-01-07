@@ -7,7 +7,7 @@ El objetivo de este repositorio es:
 - Reforzar lo aprendido mediante la práctica
 - Documentar mi progreso como estudiante de programación
 
-## 📚 Contenidos
+## Contenidos
 
 Los ejercicios incluyen, entre otros temas:
 
@@ -20,7 +20,7 @@ Los ejercicios incluyen, entre otros temas:
 - Uso de `enumerate` y `zip`
 - Expresiones lambda (nivel básico)
 
-## 🎯 Objetivo personal
+## Objetivo personal
 
 Mejorar progresivamente mi lógica de programación y sentar bases sólidas en Python antes de avanzar a temas más complejos.
 
