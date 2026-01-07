@@ -6,6 +6,8 @@ El objetivo de este repositorio es:
 - Comprender mejor los conceptos básicos de Python
 - Reforzar lo aprendido mediante la práctica
 - Documentar mi progreso como estudiante de programación
+- Practicar el uso de git y github desde mi ordenador
+- Uso correcto de commit y push
 
 ## Contenidos
 
