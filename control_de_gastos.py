@@ -7,7 +7,7 @@ Dada una lista de números gastos = [120, 50, 300, 90, 200]:
 - Calcula el gasto promedio
 - Devuelve una nueva lista solo con los gastos mayores al promedio
 """
-expenses = [120, 50, 300, 90, 200]
+global_expenses = [120, 50, 300, 90, 200]
 
 #Recordatorio: los nombres de las funciones deben ser discriptivas a lo que retornan
 def above_average_expenses(expenses):
@@ -32,4 +32,4 @@ def above_average_expenses(expenses):
 
     return result
 
-print(above_average_expenses(expenses))
+print(above_average_expenses(global_expenses))
