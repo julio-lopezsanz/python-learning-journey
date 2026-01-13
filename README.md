@@ -20,7 +20,9 @@ Los ejercicios incluyen, entre otros temas:
 - Bucles `for` y `while`
 - Funciones y alcance (scope)
 - Uso de `enumerate` y `zip`
-- Expresiones lambda (nivel básico)
+- Expresiones lambda
+- uso correcto de map y filter y cuando utilizarlo
+
 
 ## Objetivo personal
 
