@@ -22,6 +22,8 @@ def group_data(sales_data):
     grouped = {}
 
     for person, product in sales_data:
+        #Si el producto no existe, créalo con una lista vacía.
+        #Luego mete la persona en esa lista.
         grouped.setdefault(product, []).append(person)
 
     return grouped
