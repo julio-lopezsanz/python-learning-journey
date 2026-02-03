@@ -24,6 +24,8 @@ def word_counter(words_list):
     counts = {}
 
     for word in words_list:
+        #Si la palabra ya existe en el diccionario, súmale 1.
+        #Si no existe, créala empezando en 1.
         counts[word] = counts.get(word, 0) + 1
 
     return counts
