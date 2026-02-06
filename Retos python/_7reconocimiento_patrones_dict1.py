@@ -16,6 +16,8 @@ def frequent_numbers(numbers, min_times):
     almacena en un diccionario. Despues retorna unicamente los numeros que
     se repitieron mas o igual de 3 veces
     """
+
+    #Patron en diccionarios de conteo: frecuencias, repeticiones, estadísticas
     counts = {}
     for num in numbers:
         counts[num] = counts.get(num, 0) + 1
