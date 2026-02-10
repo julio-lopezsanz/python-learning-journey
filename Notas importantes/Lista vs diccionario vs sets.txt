@@ -1,0 +1,46 @@
+Usa listas cuando:
+    -Te importa el orden y puede haber repetidos.
+
+Úsalas si:
+    - Necesitas orden.
+    - Permites valores duplicados.
+    - Vas a recorrer elementos uno por uno.
+    - Accedes por posición (lista[0]).
+
+Ejemplos reales:
+    - Historial de acciones
+    - Lista de tareas
+    - Resultados de un cálculo
+
+Usa diccionarios cuando:
+    - Necesitas relacionar una clave con un valor.
+
+Úsalos si:
+    - Quieres acceso rápido por clave.
+    - Cada elemento tiene un significado.
+    - Estás agrupando o acumulando datos
+
+Ejemplos reales:
+    - Contadores ({"a": 3, "b": 5})
+    - Datos de usuarios
+    - Configuraciones
+    - Agrupar valores por clave
+
+Usa sets cuando:
+    - Solo te importa si algo existe o no. Nada de duplicados.
+
+Úsalos si:
+    - NO te importa el orden.
+    - NO quieres duplicados.
+    - Necesitas operaciones como unión o intersección.
+    - Quieres verificar pertenencia rápido (in).
+
+Ejemplos reales:
+    - Eliminar duplicados
+    - Comparar listas
+    - Validar elementos únicos
+
+Regla mental rápida (memorízala):
+    - Lista → orden + repetidos
+    - Diccionario → clave → valor
+    - Set → únicos, sin orden
