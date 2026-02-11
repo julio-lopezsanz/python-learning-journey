@@ -22,6 +22,7 @@ Los ejercicios incluyen, entre otros temas:
 - Uso de `enumerate` y `zip`
 - Expresiones lambda
 - uso correcto de map y filter y cuando utilizarlo
+- uso de diccionarios y reconocimientos de sus patrones
 
 
 ## Objetivo personal
