@@ -26,6 +26,7 @@ def frequency_words(text):
             word_counter[word] += 1
         else:
             word_counter[word] = 1
+        #Solucion mas pythonic: word_counter[word] = word_counter.get(word, 0) + 1
 
     return word_counter
 
