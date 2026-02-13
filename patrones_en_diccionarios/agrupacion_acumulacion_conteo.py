@@ -28,6 +28,12 @@ def purchases_per_person(sales_data):
         grouped[user]["total"] += amount
         grouped[user]["purchases"] += 1
 
+    #solucion pythonica:
+    #data = grouped.get(user, {"total": 0, "purchases": 0})
+        #data["total"] += amount
+        #data["purchases"] += 1
+        #grouped[user] = data
+
     return grouped
 
 print(purchases_per_person(sales))
