@@ -1,0 +1,62 @@
+Los conjuntos son una de las estructuras de datos integradas de Python. Una de las características principales de los conjuntos es que no almacenan valores duplicados. Si intentas agregar un valor duplicado a un conjunto, solo se almacenará uno de ellos.
+
+Los conjuntos son mutables y no ordenados, lo que significa que sus elementos no se almacenan en un orden específico, por lo que no puedes usar índices o claves para acceder a ellos. Solo pueden contener valores de tipos de datos inmutables como números, cadenas y tuplas. Además, soportan operaciones matemáticas de conjuntos, incluyendo unión, intersección, diferencia y diferencia simétrica.
+
+Para definir un conjunto, solo necesitas escribir sus elementos dentro de llaves y separarlos con comas.
+
+set_vacio()
+
+*** Metodos:
+
+my_set = {1,2,3,4,5}
+
+    - .add() - agrega elementos a el set
+        - my_set.add(num)
+
+    - .remove() - Elimina elementos del set (Causa keyerror si no encuentra el elementos)
+        - my_set.remove(num)
+
+    - .discard() - Elimina elementos del set (No causa keyerror si no encuentra el elemento)
+        - my_set.discard(num)
+        
+    - .clear() - limpia todo el set quitando todos los elementos de este
+        - my_set.clear()
+
+
+*** Metodos potentes:
+
+my_set = {1, 2, 3, 4, 5}
+your_set = {2, 3, 4, 6}
+
+    - .issubset() - Verifica si un set es subconjunto de otro. 
+        - print(your_set.issubset(my_set)) # False
+
+    - .issuperset() - verifica si un set es superconjunto de otro.
+        - print(my_set.issuperset(your_set)) # False
+
+    - .isdisjoint() - verifica si dos sets no tiene elementos en comun
+        - print(my_set.isdisjoint(your_set)) # False
+
+*** Operadores: 
+
+my_set = {1, 2, 3, 4, 5}
+your_set = {2, 3, 4, 6}
+
+    - el operador union (|) - devuelve un nuevo set con los elementos de ambos sets.
+        - my_set | your_set # {1, 2, 3, 4, 5, 6}
+
+    - el operador intersección (&) - devuelve un nuevo set solo con los elementos que ambos sets tienen en comun.
+        - my_set & your_set # {2, 3, 4}
+    
+    -El operador de diferencia (-) - devuelve un nuevo set con los elementos del primer set, que no estan en el segundo set.
+        - my_set - your_set # {1, 5}
+    
+    - El operador de simetrica (^) - devuelve un nuevo set con los elementos que estan en el primer set y en el segundo set, pero que no estan en ambos.
+        - my_set ^ your_set # {1, 5, 6}
+
+    -Cada uno de estos operadores también tiene su operador de asignación compuesta correspondiente si agregas el signo igual junto a él. Estos operadores asignan automáticamente el conjunto resultante al primer conjunto en la expresión:
+        - (|=) (&=) (-=) (^=)
+            - my_set -= your_set
+            - print(my_set) # {1, 5}
+
+Puedes verificar si un elemento está en un conjunto o no con el operador in. Aquí, estamos comprobando si 5 está en my_set. El resultado será un valor booleano True o False
