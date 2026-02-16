@@ -1,0 +1,56 @@
+En el desarrollo de software, una biblioteca es como una caja de herramientas para desarrolladores.
+
+En lugar de tener que implementar cada parte del código tú mismo desde cero, una biblioteca te ofrece código preescrito y reutilizable, como funciones, clases y estructuras de datos que puedes usar en tus proyectos.
+
+Python tiene una biblioteca estándar extensa con muchos módulos integrados diferentes. Todos son soluciones estandarizadas y bien evaluadas para muchos de los problemas y tareas que enfrentarás diariamente como programador, tales como:
+
+    - Interactuando con el sistema operativo.
+    - Trabajando con archivos.
+    - Redes.
+    - Trabajando con fecha y hora.
+    - Realizando operaciones matemáticas.
+    - Usando expresiones regulares.
+    - Probando y depurando tu código.
+
+Algunos ejemplos de módulos integrados populares son math, random, re (abreviatura de "regular expressions") y datetime.
+
+    - El módulo math tiene funciones útiles para realizar operaciones matemáticas más complejas.
+    - El módulo random es útil para generar números aleatorios.
+    - El módulo re se usa para trabajar con expresiones regulares.
+    - El módulo datetime es útil para trabajar con fechas y horas en Python.
+
+Para importar un modulo, usas una sentencia import. Estas sentencias te permiten importar módulos en tu script de Python. Las sentencias import generalmente se escriben al principio del archivo. Además, puedes personalizarlas según tus necesidades. Primero, usas la sentencia import, seguida del nombre del módulo:
+
+    - import module_name
+
+Si necesitas importar el módulo con un nombre diferente (también conocido como un "alias"), puedes usar esta sintaxis, con as seguido del alias al final de la declaración de importación:
+
+    - import module_name as module_alias
+
+Quizás solo necesitas una o dos funciones o clases específicas. Python tiene exactamente lo que necesitas en ese caso. Ahora la sentencia de importación comienza con from, seguida del nombre del módulo, y luego la palabra clave import seguida del nombre de los elementos que quieres importar:
+
+    - from module_name import name1, name2
+
+Si quieres asignar alias a estos nombres, puedes hacerlo usando la palabra clave as después de cada uno, seguida del alias que quieres usar:
+
+    - from module_name import name1 as alias1, name2 as alias2
+
+Finalmente, encontramos esta declaración de importación que termina con un asterisco. El asterisco le está diciendo a Python que quieres importar todo en ese módulo, pero quieres importarlo para que no necesites usar el nombre del módulo como prefijo:
+
+    - from module_name import *
+
+Genial. Ahora que sabes más sobre módulos, también deberías conocer este idiom muy importante en los scripts de Python, porque están muy relacionados:
+
+    - if __name__ == '__main__': 
+         # Code
+
+__name__ es una variable incorporada especial en Python.
+Cuando un archivo Python se ejecuta directamente, Python asigna el valor de esta variable a la cadena "__main__".
+Pero si el archivo Python se importa como un módulo en otro script Python, el valor de la variable __name__ se establece con el nombre de ese módulo (usualmente el nombre del archivo sin la extensión .py).
+Por eso a menudo encontrarás esta condicional en scripts de Python. Contiene el código que quieres ejecutar solo si el script de Python se está ejecutando como el programa principal:
+
+    - if __name__ == '__main__': 
+          # Code
+Pero si el script se importa como un módulo, el código dentro de ese bloque no se ejecuta.
+
+Esto es útil porque permite que los scripts de Python tengan dos propósitos. Pueden ejecutarse directamente para llevar a cabo su lógica principal, o pueden importarse en otro módulo sin ejecutar su lógica principal.
