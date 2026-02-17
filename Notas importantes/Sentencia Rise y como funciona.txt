@@ -1,0 +1,58 @@
+En Python, la sentencia raise es una herramienta poderosa que te permite activar manualmente excepciones en tu código. Te da control sobre cuándo y cómo se generan los errores, permitiéndote crear condiciones de error personalizadas y hacer cumplir un comportamiento específico del programa.
+
+La sentencia raise se usa para lanzar explícitamente una excepción en cualquier punto de tu programa, permitiéndote señalar que ha ocurrido una condición de error o que no se han cumplido ciertos requisitos.
+
+La sentencia raise de Python se puede usar de varias maneras para provocar excepciones. En su forma más básica, puedes lanzar excepciones integradas o crear mensajes de error personalizados. Aquí tienes un ejemplo sencillo:
+
+    def check_age(age):
+        if age < 0:
+            raise ValueError('Age cannot be negative')
+        return age
+
+    try:
+        check_age(-5)
+    except ValueError as e:
+        print(f'Error: {e}') # Error: Age cannot be negative
+
+    Puedes ver aquí que raise es la palabra clave que desencadena una excepción.
+    En este ejemplo, estamos generando un ValueError con un mensaje personalizado cuando se proporciona una edad inválida.
+
+La sentencia raise también puede usarse para volver a lanzar la excepción actual, lo cual es particularmente útil en el manejo de excepciones:
+
+    def process_data(data):
+        try:
+            result = int(data)
+            return result * 2
+        except ValueError:
+            print('Logging: Invalid data received')
+            raise  # Re-raises the same ValueError
+
+    try:
+        process_data('abc')
+    except ValueError:
+        print('Handled at higher level')
+
+    Aquí la palabra clave raise (sin argumentos), vuelve a lanzar la excepción actual que se está manejando.
+    Esto te permite registrar o realizar limpieza mientras sigues propagando el error hacia arriba en la pila de llamadas.
+
+Puedes crear y lanzar excepciones personalizadas definiendo tus propias clases de excepción:
+
+    class InsufficientFundsError(Exception):
+        def __init__(self, balance, amount):
+            self.balance = balance
+            self.amount = amount
+            super().__init__(f'Insufficient funds: ${balance} available, ${amount} requested')
+    
+    def withdraw(balance, amount):
+        if amount > balance:
+            raise InsufficientFundsError(balance, amount)
+        return balance - amount
+
+    try:
+        new_balance = withdraw(100, 150)
+    except InsufficientFundsError as e:
+        print(f'Transaction failed: {e}')
+
+Aquí puedes ver que las clases de excepciones personalizadas heredan de Exception o de sus subclases.
+
+Aprenderás más sobre clases y herencia en lecciones futuras. Por ahora, sabe que esta es una forma de crear tus propias excepciones con lógica personalizada.
