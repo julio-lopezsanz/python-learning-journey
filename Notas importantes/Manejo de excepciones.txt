@@ -1,0 +1,59 @@
+En Python, el manejo de excepciones es una parte fundamental para escribir programas robustos y tolerantes a fallos. Te permite anticipar, capturar y responder a errores de manera estructurada.
+
+El manejo de excepciones es el proceso de capturar y gestionar errores que ocurren durante la ejecución de un programa, para que tu código no falle inesperadamente.
+
+Python proporciona los bloques try, except, else y finally para manejar errores de manera elegante. Aquí tienes un ejemplo básico:
+
+    try:
+        x = 10 / 0
+    except ZeroDivisionError:
+        print("You can't divide by zero!")
+
+    try: El bloque de código donde anticipas que podría ocurrir un error.
+    except: Este bloque se ejecuta si se genera un error del tipo especificado dentro del try.
+    En este caso, dividir entre cero genera un ZeroDivisionError, que luego es capturado y manejado.
+
+Y aquí hay un ejemplo que también muestra cómo usar los bloques else y finally:
+
+    try:
+        x = 10 / 2
+    except ZeroDivisionError:
+        print("You can't divide by zero!")
+    else:
+        print('Division successful:', x)
+    finally:
+        print('This block always runs.')
+
+    else: Se ejecuta si no se lanza ninguna excepción en el bloque try.
+    finally: Se ejecuta sin importar qué—ya sea que haya ocurrido una excepción o no. Útil para tareas de limpieza como cerrar archivos o liberar recursos.
+
+También puedes capturar múltiples excepciones con bloques except separados:
+
+    try:
+        number = int('abc')
+        result = 10 / number
+    except ValueError:
+        print('That was not a valid number.')
+    except ZeroDivisionError:
+        print("Can't divide by zero.")
+
+Al usar cláusulas except separadas, puedes hacer que tus respuestas de error sean más específicas y útiles.
+
+También puedes usar el objeto de excepción, que normalmente se asigna a otro nombre con la palabra clave as. Aquí estamos usando e como alias para el objeto de error:
+
+    try:
+        x = 1 / 0
+    except ZeroDivisionError as e:
+        print(f'Error occurred: {e}')
+
+Usar e te permite acceder al mensaje de error real u objeto para registro o depuración.
+
+También puedes capturar múltiples excepciones en una sola cláusula except especificando las excepciones como una tupla:
+
+    try:
+        number = int(input('Enter a number: '))
+        result = 10 / number
+    except (ValueError, ZeroDivisionError) as e:
+        print(f'Error occurred: {e}')
+
+El manejo de excepciones permite que tus programas se recuperen de errores de manera elegante. Usando try, except, else y finally, puedes anticipar problemas potenciales y construir aplicaciones más resistentes.
