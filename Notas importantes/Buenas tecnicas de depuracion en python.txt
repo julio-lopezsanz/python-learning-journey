@@ -1,0 +1,76 @@
+Depurar es una habilidad esencial para cualquier desarrollador de Python. Entender técnicas fundamentales puede ayudarte a identificar y solucionar problemas de manera eficiente.
+
+La depuración es el proceso de identificar y resolver errores o bugs en tu código. Implica examinar el código, entender el flujo y usar herramientas para localizar la fuente de los problemas.
+
+En esta lección, repasaremos técnicas comunes de depuración que puedes usar en tu próximo proyecto de Python.
+
+***Usando la función print y las f-strings
+
+    -Primero, usar la función print() y f-strings en varios puntos de tu código puede ayudarte a entender el flujo y el estado de las variables.
+    def add(a, b):
+        result = a + b
+        print(f'Adding {a} and {b} gives {result}')
+        return result
+    Al imprimir los valores de a, b y result, puedes verificar que la función se comporta como se espera.
+
+***Depuración interactiva con el módulo pdb
+
+    A continuación, puedes utilizar el módulo incorporado pdb de Python para la depuración interactiva:
+
+    import pdb
+    def divide(a, b):
+        pdb.set_trace()
+        return a / b
+    print(divide(10, 2))
+
+    Al establecer una traza con el método .set_trace(), puedes avanzar paso a paso por el código, inspeccionar variables y entender el comportamiento del programa.
+
+    Si ejecutas el código anterior, verás una salida que muestra la ubicación del archivo que   estás ejecutando, la línea donde llamaste al método .set_trace() y el código inmediatamente después de él, y un prompt interactivo de pdb:
+
+    > /Users/fcc/Desktop/debugging.py(5)divide()
+    -> return a / b
+    (Pdb)
+
+    Si escribes help en el prompt, verás una lista de comandos que puedes usar:
+
+***herramientas de depuración del IDE
+
+    Muchos Entornos Integrados de Desarrollo (IDEs) ofrecen herramientas avanzadas de depuración, como puntos de interrupción, ejecución paso a paso e inspección de variables.
+
+    **Usando VSCode
+
+        Si usas VS Code, puedes establecer puntos de interrupción en tu código y ejecutar el depurador para pausar la ejecución en esos puntos. Aquí te mostramos cómo depurar la misma función divide:
+
+        Paso 1: Configura tu código Crea un archivo llamado main.py con el siguiente contenido:
+
+        def divide(a, b):
+            result = a / b
+            return result
+
+        print(divide(10, 2))
+        print(divide(15, 3))
+
+        Paso 2: Establece un punto de interrupción
+        Haz clic en la canaleta (margen izquierdo) junto a la línea 2 (result = a / b) para establecer un punto de interrupción
+        Aparecerá un punto rojo, indicando que el breakpoint está establecido
+
+        Paso 3: Comienza a depurar
+        Presiona F5 o ve a Run > Start Debugging
+        Selecciona "Python File" cuando se te solicite
+        El depurador pausará la ejecución en tu breakpoint
+
+        Paso 4: Inspecciona las variables
+        Pasa el cursor sobre las variables para ver sus valores actuales
+        Usa el panel Variables a la izquierda para ver todas las variables locales
+        Usa la Consola de Depuración en la parte inferior para evaluar expresiones
+
+        Paso 5: Ejecuta el código paso a paso
+        Usa la barra de herramientas de depuración para:
+        Continuar (F5): Reanuda la ejecución hasta el siguiente punto de interrupción
+        Step Over (F10): Ejecuta la línea actual y pasa a la siguiente
+        Step Into (F11): Entra en llamadas a funciones
+        Step Out (Shift+F11): Sal de la función actual
+
+Las herramientas de depuración del IDE proporcionan una interfaz visual para examinar el estado de tu programa, facilitando la identificación y solución de problemas en comparación con usar solo declaraciones print.
+
+Al dominar estas técnicas fundamentales de depuración - usando sentencias print(), el módulo pdb y las herramientas del IDE - puedes identificar y resolver eficazmente problemas en tu código Python. Cada técnica tiene su lugar: sentencias print() para verificaciones rápidas, pdb para exploración interactiva y depuradores del IDE para inspección visual.
