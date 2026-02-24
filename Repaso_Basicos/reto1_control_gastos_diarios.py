@@ -8,37 +8,48 @@ El programa debe pedir al usuario:
 
 El programa termina cuando el usuario escriba 0.
 """
-budget = 500.0
-expenses = []
+BUDGET = 500
 
-while True:
-    try:
-        expen = float(input("\nIngresa tus gastos de hoy (0 para terminar): "))
-    except ValueError:
-        print("Error: solo se permiten números.")
-        continue
+def expenses_per_day():
+    """Hace un registro de los gastos que el usuario ha realizado por día"""
+    expenses = []
+    while True:
+        try:
+            exp = float(input("Ingresa el gasto de hoy (0 para terminar): "))
+        except ValueError:
+            print("Error: solo números")
+            continue
 
-    if expen == 0:
-        print("\nRealizando cálculos...")
-        break
+        if exp == 0:
+            return expenses
+        if exp < 0:
+            print("El gasto no puede ser negativo")
+            continue
 
-    if expen < 0:
-        print("El gasto no puede ser negativo.")
-        continue
+        expenses.append(exp)
 
-    expenses.append(expen)
+def total_expenses(expenses):
+    """Suma los gastos registrados"""
+    return sum(expenses)
 
-if not expenses:
-    print("\nNo hay datos disponibles para realizar cálculos.")
+def avg_expenses(expenses):
+    """Saca el promedio de los gastos registrados"""
+    return round(sum(expenses) / len(expenses), 2) if expenses else 0
+
+
+expenses_log = expenses_per_day()
+
+if not expenses_log:
+    print("\nNo ha registrado ningún gasto. No se pueden hacer cálculos")
 else:
-    total = sum(expenses)
-    average = round(total / len(expenses), 2)
+    total = total_expenses(expenses_log)
+    average = avg_expenses(expenses_log)
 
-    print("\n========= Datos finales =========")
-    print(f"Gastos totales: {total}")
-    print(f"Promedio de gastos: {average}")
+    print("\n---------- Registro de gasto por día ----------")
+    print(f"\nGastos totales: {total}")
+    print(f"\nPromedio de gastos: {average}")
 
-    if total > budget:
-        print(f"Te pasaste del presupuesto por: {total - budget}")
+    if BUDGET < total:
+        print(f"\nSe ha pasado del presupuesto por: {total - BUDGET}")
     else:
-        print(f"Presupuesto restante: {budget - total}")
+        print(f"\nPresupuesto restante: {BUDGET - total}")
