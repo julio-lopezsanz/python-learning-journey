@@ -15,7 +15,7 @@ if weight < 0 or height < 0:
     print("Error: La altura y el peso deben ser valores positivos")
 else:
     imc = round(weight / (height**2),2)
-    if imc <= 18.5:
+    if imc < 18.5:
         print(f"Su IMC es: {imc} - Bajo peso")
     elif imc <= 24.9:
         print(f"Su IMC es: {imc} - normal")
