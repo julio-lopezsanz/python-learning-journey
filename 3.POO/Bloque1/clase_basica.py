@@ -9,7 +9,15 @@ Asegúrate que la velocidad no baje de 0.
 """
 
 class Car:
-    """Clase carro"""
+    """
+    Representa un automóvil con sus datos y comportamiento básico.
+
+    Atributos:
+        make (str): Marca del carro
+        model (str): Modelo del carro
+        year (int): Año de fabricación
+        speed (float): Velocidad actual en KM/H
+    """
     def __init__(self, make, model, year, speed):
         self.make = make
         self.model = model
