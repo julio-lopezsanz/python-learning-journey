@@ -16,7 +16,7 @@ class User:
         """Cambia la contraseña de un usuario, siempre y cuando escriba su actual contraseña"""
         if current_password == self.__password:
             self.__password = new_password
-            print(f"La contraseña ha cambiado exitosamente")
+            print("La contraseña ha cambiado exitosamente")
         else:
             print("Contraseña actual incorrecta")
 
