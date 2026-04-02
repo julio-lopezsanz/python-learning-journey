@@ -23,3 +23,5 @@ class Student:
         """Agrega calificaciones a la lista de calificaciones"""
         if 0 <= grade <= 100:
             self.grades.append(grade)
+        else:
+            raise ValueError(f"Calificacion invalida: {grade}. Debe ser entre 0 y 100")
