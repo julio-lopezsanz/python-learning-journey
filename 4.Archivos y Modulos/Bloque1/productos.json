@@ -1,0 +1,14 @@
+[
+    {
+        "product": "Audifonos",
+        "price": 5.99
+    },
+    {
+        "product": "Microfono",
+        "price": 10.99
+    },
+    {
+        "product": "Teclado",
+        "price": 3.99
+    }
+]
