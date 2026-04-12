@@ -24,7 +24,7 @@ The script scans a target directory and moves files into subfolders based on the
 ## Installation & Usage
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/julio-lopezsanz/file-organizer.git](https://github.com/julio-lopezsanz/file-organizer.git)
+   git clone https://github.com/julio-lopezsanz/file-organizer.git
 2. **Run the script:**
    ```bash 
    python main.py
