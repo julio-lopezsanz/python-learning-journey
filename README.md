@@ -1,34 +1,40 @@
-# Ejercicios de Python 
+# File Organizer (Python)
 
-Este repositorio contiene ejercicios y prácticas personales realizadas mientras aprendo Python.
+A Python-based utility to automatically organize local files into categorized folders by extension. Designed for efficiency and clean workspace management.
 
-El objetivo de este repositorio es:
-- Comprender mejor los conceptos básicos de Python
-- Reforzar lo aprendido mediante la práctica
-- Documentar mi progreso como estudiante de programación
-- Practicar el uso de git y github desde mi ordenador
-- Uso correcto de commit y push
+## Purpose
+I built this project to automate the process of organizing directories (like the Downloads folder). This is a **learning project** focused on mastering Python fundamentals and file system automation.
 
-## Contenidos
+## Features
+- **Automatic Sorting:** Groups files into categories like `Images`, `Documents`, and `Media`.
+- **Safety Checks:** Verifies directory existence before moving files.
+- **Extensible:** Easy to add new file extensions and categories.
 
-Los ejercicios incluyen, entre otros temas:
+## How it works
+The script scans a target directory and moves files into subfolders based on their extension:
+- `.jpg, .png, .gif` -> **Images**
+- `.pdf, .docx, .txt` -> **Documents**
+- `.zip, .rar` -> **Archives**
 
-- Variables y tipos de datos
-- Tipos mutables e inmutables
-- Cadenas de caracteres y sus métodos
-- Listas, tuplas y sus métodos
-- Bucles `for` y `while`
-- Funciones y alcance (scope)
-- Uso de `enumerate` y `zip`
-- Expresiones lambda
-- uso correcto de map y filter y cuando utilizarlo
-- uso de diccionarios y reconocimientos de sus patrones
+## Technologies Used
+* **Python 3.x**
+* **OS Module** (for file system interaction)
+* **Shutil Module** (for high-level file operations)
 
+## Installation & Usage
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/julio-lopezsanz/file-organizer.git](https://github.com/julio-lopezsanz/file-organizer.git)
+2. **Run the script:**
+   ```bash 
+   python main.py
 
-## Objetivo personal
-
-Mejorar progresivamente mi lógica de programación y sentar bases sólidas en Python antes de avanzar a temas más complejos.
+## Learning Journey
+**By building this project, I am practicing:**
+- Using Python's standard library for real-world tasks.
+- Managing code versions with Git and GitHub.
+- Documentation best practices for developers.
 
 ---
 
-Hecho con práctica, errores y constancia.
+Created with 💻 by [**Julio Cesar Lopez Sanchez**](https://github.com/julio-lopezsanz)
