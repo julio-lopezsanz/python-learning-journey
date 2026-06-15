@@ -4,7 +4,7 @@ Problema: Mostrar solo aquellos caracteres que estén presentes en un índice
           par en la cadena dada.
 """
 
-def mostrar_indices_pares(word) -> None:
+def mostrar_indices_pares(word: str) -> None:
     """Muestra los caracteres de una cadena con indice par
 
     toma una cadena de caracteres, la recorre con el uso del ciclo for, e imprime
