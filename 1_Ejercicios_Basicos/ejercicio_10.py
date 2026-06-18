@@ -26,7 +26,7 @@ def encontrar_min_max(numbers: list) -> int:
 
 def main() -> None:
     """Punto de entrada del programa"""
-    nums = []
+    nums = [45, 2, 89, 12, 7]
     num_min, num_max = encontrar_min_max(nums)
     print(f"Lista de numeros dada: {nums}")
     print(f"Numero mayor: {num_max}\nNumero menor: {num_min}")
