@@ -9,7 +9,17 @@ class Battery:
     """Representa la batería de un vehículo con nivel de carga."""
 
     def __init__(self, capacity: int) -> None:
-        self.capacity = capacity
+        """Inicializa la batería con una capacidad dada.
+
+        Args:
+            capacity: Capacidad máxima de carga de la batería.
+
+        Raises:
+            ValueError: Si la capacidad es negativa.
+        """
+        if capacity < 0:
+            raise ValueError("La capacidad de la batería no puede ser negativa")
+        self.capacity = capacity        
         self.charge_level = capacity  # inicia con carga completa
 
     def consume(self, amount: int) -> None:
@@ -32,12 +42,12 @@ class Battery:
 
 class Vehicle:
     """Clase para representar un vehículo con operaciones de aceleración y frenado.
+
     Además, tiene una batería que se consume al arrancar.
+
     Args:
         brand: Marca del vehículo.
         battery_capacity: Capacidad de la batería del vehículo.
-    Raises:
-        ValueError: Si la capacidad de la batería es negativa.
     """
     def __init__(self, brand: str, battery_capacity: int) -> None:
         self.brand = brand
